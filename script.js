@@ -43,12 +43,17 @@ let gameRules = document.getElementById('gameRules');
 gameRules.addEventListener('click', function () {
   document.getElementById('html').classList.add("fondGris");
   document.getElementById('cardRules').style.display = "block";
+  document.getElementById('bouton1').style.display = "none";
+  document.getElementById('bouton2').style.display = "none";
+
 
   //clique en dehors de la règle pour disparaitre
   document.addEventListener("mouseup", function (event) {
     let obj = document.getElementById("gameRules");
     (!obj.contains(event.target))
     document.getElementById('cardRules').style.display = "none"; document.getElementById('html').classList.remove("fondGris");
+    document.getElementById('bouton1').style.display = "inline-block";
+    document.getElementById('bouton2').style.display = "inline-block";
   });
 })
 
