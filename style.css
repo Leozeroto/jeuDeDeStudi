@@ -1,0 +1,130 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-image: url('pubBackGround.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  }
+
+.fondGris {
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+  position: absolute;
+  background-color: grey;
+}
+
+.biereImg {
+  width: 150px;
+}
+
+
+.biereRotate {
+  animation: beerRotate 1s infinite linear;
+  /**animation-duration: infinite linear;
+  animation-name: beerRotate;**/
+}
+
+.playerName:hover, .gameRules:hover, .newGame:hover{
+  cursor: pointer;
+}
+
+.cardRules {
+  position : absolute;
+  display: none;
+}
+
+.deSvg {
+  width: 100px;
+  height: auto;
+  padding: 5px 0 0 0;
+  text-align: center;
+}
+
+.ligneBiere {
+  padding: 0 0 5px 0;
+
+}
+
+.deSvg:hover {
+  cursor: pointer;
+}
+
+.scoreTamponPlayer, .stockPlayer {
+  color : white;
+  font-weight: bold;
+}
+
+.scoreDe {
+  border: 1px solid gold;
+  color: white;
+  font-weight: bold;
+  background-color: goldenrod;
+  border-radius: 20px;
+}
+
+.deSvg.rotate {
+  animation: rotation 1s infinite linear;
+
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/** pour bouger la biere **/
+@keyframes beerRotate {
+  from {
+    transform: rotate(-10deg)
+  }
+  25% {
+    transform: rotate(0deg)
+  }
+  50% {
+    transform: rorate(5deg)
+  }
+  75% {
+    transform: rotate(10deg)
+  }
+  to {
+    transform: rotate(-10deg)
+  }
+}
+
+
+.container-fluid {
+  text-align: center;
+}
+
+@media (max-width:600px) {
+  .biereImg {
+    width: 100px;
+  }
+
+  .resultatPlayer {
+    font-size: 50px;
+  }
+
+  .beerTexture {
+    width: 100px;
+    z-index: 0;
+    margin-top: 60%;
+  }
+  
+}
+
+
+.footer {
+  
+  padding: 50px;
+  
+}
